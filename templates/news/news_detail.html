@@ -1,0 +1,23 @@
+{% extends 'flatpages/default.html' %}
+
+{% block title %}
+Post List
+{% endblock title %}
+
+{% block content %}
+<head>
+<style>
+
+div {
+line-height: 2.5
+}
+
+</style>
+</head>
+    <div>
+        <h2><strong>{{ post.title }}</strong></h2>
+        <div align="left"><h5>{{ post.dateCreation|date:'d M Y H:m' }}</h5></div>
+        <div align="justify"><h4><i>{{ post.text }}</i></h4></div>
+        <div align="right"><h3><i>Автор: {{ post.author.authorUser.username }}</i></h3></div>
+    </div>
+{% endblock content %}

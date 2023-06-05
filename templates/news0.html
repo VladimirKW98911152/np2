@@ -1,0 +1,23 @@
+<!--  наследуемся от шаблона default.html, который мы создавали ещё во времена flatpages -->
+{% extends 'flatpages/default.html' %}
+
+{% block title %}
+news
+{% endblock title %}
+
+{% block content %}
+<head>
+<style>
+
+div {
+line-height: 2.5
+}
+
+</style>
+</head>
+<div>
+<h2><strong>{{ post.title }}</strong></h2>
+<div align="left"><h5>{{ post.dateCreation|date:'d M Y H:m' }}</h5></div>
+<div align="justify"><h4><i>{{ post.text }}</i></h4></div>
+</div>
+{% endblock content %}
